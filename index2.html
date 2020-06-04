@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			padding: 20px;
+		}
+
+		body {
+			background-color: orangered;
+		}
+
+		button {
+			margin-right: 50px;
+			margin-bottom: 50px;
+			padding: 20px;
+			color: #fff;
+			font-size: 1.2rem;
+			border: none;
+			cursor: pointer;
+			background-color: transparent;
+		}
+		#one {
+			background-color: white;
+			color: orangered;
+			border: 3px solid transparent;
+			transition: all 0.5s ease;
+		}
+		#one:hover {
+			background-color: transparent;
+			color: white;
+			border: 3px solid #fff;
+		}
+		#two {
+			position: relative;
+		}
+		#two:hover::before {
+			width: 100%;
+		}
+		#two:hover::after {
+			height: 100%;
+		}
+		#two::before {
+			content: '';
+			height: 3px;
+			width: 0%;
+			background-color: white;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transition: all 0.7s ease;
+		}
+		#two::after {
+			content: '';
+			height: 0%;
+			width: 3px;
+			background-color: white;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transition: all 0.7s ease;
+		}
+
+		/*three*/
+		#three {
+			position: relative;
+		}
+		#three:hover::before {
+			width: 100%;
+		}
+		#three:hover::after {
+			width: 100%;
+		}
+		#three::before {
+			content: '';
+			height: 3px;
+			width: 0%;
+			background-color: white;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transition: all 0.7s ease;
+		}
+		#three::after {
+			content: '';
+			height: 3px;
+			width: 0%;
+			background-color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all 0.7s ease;
+		}
+
+		#four {
+			position: relative;
+		}
+		#four:hover::before {
+			width: 100%;
+			height: 100%;
+		}
+		#four:hover::after {
+			width: 100%;
+			height: 100%;
+		}
+		#four::before {
+			content: '';
+			height: 20px;
+			width: 20px;
+			border: 3px solid white;
+			border-color: #fff #fff transparent transparent;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transition: all 0.7s ease;
+		}
+		#four::after {
+			content: '';
+			height: 20px;
+			width: 20px;
+			border: 3px solid white;
+			border-color: transparent transparent #fff #fff;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: all 0.7s ease;
+		}
+		#five {
+			border: 1px solid #fff;
+			position: relative;
+		}
+		#five:hover {
+			box-shadow: inset 0 0 15px #fff;
+			transition: all 0.3s ease;
+		}
+		#five:hover:before {
+			transform: scale(1.2);
+			border: transparent;
+		}
+		#five::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 1px solid #fff;
+			transition: all 0.3s ease;
+		}
+		#six {
+			position: relative;
+			border: 3px solid #fff;
+			transition: all 0.7s ease;
+		}
+		#six:hover {
+			color: orangered;
+		}
+		#six:hover::before {
+			width: 100%;
+		}
+		#six::before {
+			content: '';
+			height: 100%;
+			width: 0%;
+			background-color: white;
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			left: 0;
+			transition: all 0.7s ease;
+		}
+		#seven {
+			position: relative;
+			border: 3px solid #fff;
+			transition: all 0.7s ease;
+			overflow: hidden;
+		}
+		#seven:hover {
+			color: orangered;
+		}
+		#seven:hover::before {
+			width: 140%;
+		}
+		#seven::before {
+			content: '';
+			height: 200%;
+			width: 10%;
+			background-color: white;
+			position: absolute;
+			top: -40px;
+			transform: rotate(30deg);
+			left: -30px;
+			z-index: -2;
+			transition: all 0.7s ease;
+		}
+		#eight {
+			position: relative;
+			border: 2px solid #fff;
+			transition: all 0.3s ease;
+		}
+		#eight:hover {
+			color: orangered;
+		}
+		#eight:hover::before {
+			height: 50%;
+		}
+		#eight:hover::after {
+			height: 50%;
+		}
+		#eight::before {
+			content: '';
+			height: 0;
+			width: 100%;
+			background-color: white;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+			transition: all 0.3s ease;
+		}
+		#eight::after {
+			content: '';
+			height: 0%;
+			width: 100%;
+			background-color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transition: all 0.3s ease;
+		}
+		#nine {
+			border: 1px solid #fff;
+			transition: all 0.3s ease;
+		}
+		#nine:hover {
+			border-radius: 35px;
+		}
+		#ten {
+			position: relative;
+			border: 3px solid #fff;
+			transition: all 0.7s ease;
+			overflow: hidden;
+		}
+		#ten:hover {
+			color: orangered;
+		}
+		#ten:hover::before {
+			width: 220%;
+			height: 320%;
+			border-radius: 0;
+		}
+		#ten::before {
+			content: '';
+			height: 200%;
+			width: 0%;
+			background-color: white;
+			position: absolute;
+			border-radius: 80%;
+			top: -40px;
+			transform: rotate(30deg);
+			left: -30px;
+			z-index: -2;
+			transition: all 0.7s ease;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<button id="one">Hover Me</button>
+			<button id="two">Hover Me</button>
+			<button id="three">Hover Me</button>
+			<button id="four">Hover Me</button>
+			<button id="five">Hover Me</button>
+			<button id="six">Hover Me</button>
+			<button id="seven">Hover Me</button>
+			<button id="eight">Hover Me</button>
+			<button id="nine">Hover Me</button>
+			<button id="ten">Hover Me</button>
+		</div>
+	</body>
+</html>
