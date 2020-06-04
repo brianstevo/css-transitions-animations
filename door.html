@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 400px;
+        margin: 30px auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content {
+        color: #fff;
+
+    }
+
+    .content h2 {
+        padding: 20px;
+    }
+
+    .content p {
+        padding: 20px;
+    }
+
+
+    #one {
+        background-color: teal;
+
+    }
+
+    .container h2 {
+        text-align: center;
+    }
+
+    .container:hover #two {
+        transform: translateX(0px);
+    }
+
+    #two {
+        background-color: orangered;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-400px);
+        transition: all .5s ease;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="content" id="one">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla rem enim officia assumenda, architecto
+                itaque
+                molestias ullam neque praesentium omnis consequuntur error facilis ducimus mollitia animi id laboriosam
+                qui?
+                Sint.</p>
+        </div>
+        <div class="content" id="two">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla rem enim officia assumenda, architecto
+                itaque
+                molestias ullam neque praesentium omnis consequuntur error facilis ducimus mollitia animi id laboriosam
+                qui?
+                Sint.</p>
+        </div>
+    </div>
+</body>
+
+</html>
