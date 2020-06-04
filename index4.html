@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 36px;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .container {
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .text-container {
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+    .text-container:nth-child(2n+1) {
+        transform: skew(10deg);
+    }
+
+    .text-container:nth-child(2n) {
+        transform: skew(-10deg);
+    }
+
+    .text-container:nth-child(2n+1) p {
+        transform: skew(-10deg);
+    }
+
+    .text-container:nth-child(2n) p {
+        transform: skew(10deg);
+    }
+
+    .text-container P {
+        font-size: 1.1em;
+        padding: 20px;
+    }
+
+    body {
+        background-color: orangered;
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>Skew Example</h1>
+    <div class="container">
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint esse minus magni,
+                aperiam dolores ex id molestias, cum animi nostrum autem odio explicabo sequi provident accusamus,
+                debitis
+                tempore itaque.</p>
+        </div>
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint esse minus magni,
+                aperiam dolores ex id molestias, cum animi nostrum autem odio explicabo sequi provident accusamus,
+                debitis
+                tempore itaque.</p>
+        </div>
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint esse minus magni,
+                aperiam dolores ex id molestias, cum animi nostrum autem odio explicabo sequi provident accusamus,
+                debitis
+                tempore itaque.</p>
+        </div>
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint esse minus magni,
+                aperiam dolores ex id molestias, cum animi nostrum autem odio explicabo sequi provident accusamus,
+                debitis
+                tempore itaque.</p>
+        </div>
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint esse minus magni,
+                aperiam dolores ex id molestias, cum animi nostrum autem odio explicabo sequi provident accusamus,
+                debitis
+                tempore itaque.</p>
+        </div>
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sint esse minus magni,
+                aperiam dolores ex id molestias, cum animi nostrum autem odio explicabo sequi provident accusamus,
+                debitis
+                tempore itaque.</p>
+        </div>
+    </div>
+</body>
+
+</html>
