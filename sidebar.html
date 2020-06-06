@@ -1,269 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/e4de6e1dd7.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e4de6e1dd7.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+		header {
+			background-color: crimson;
+		}
 
-    header {
-        background-color: crimson;
-    }
+		header a {
+			display: inline-block;
+			padding: 20px;
+			text-decoration: none;
+			color: white;
+			transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
 
-    header a {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        color: white;
-        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
+		header a:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
 
-    header a:hover {
-        background-color: rgba(0, 0, 0, .1);
-    }
+		.first-nav li {
+			display: inline-block;
+		}
 
-    .first-nav li {
-        display: inline-block;
-    }
+		.first-nav {
+			text-align: right;
+		}
 
-    .first-nav {
-        text-align: right;
-    }
+		.second-nav {
+			position: relative;
+			width: 300px;
+			background-color: crimson;
+			height: 100vh;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			transform: translate(-300px);
+			transition: all 0.5s ease;
+			overflow-y: scroll;
+		}
 
-    .second-nav {
-        position: relative;
-        width: 300px;
-        background-color: crimson;
-        height: 100vh;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        transform: translate(-300px);
-        transition: all .5s ease;
-    }
+		.open {
+			transform: translate(0px);
+			position: fixed;
+		}
 
-    .open {
-        transform: translate(0px);
-        position: fixed;
-    }
+		.margin {
+			margin-left: 300px;
+		}
 
-    .margin {
-        margin-left: 300px;
-    }
+		.fas {
+			color: white;
+			font-size: 2em;
+		}
 
-    .fas {
+		.fa-bars {
+			position: fixed;
+			top: 15px;
+			left: 35px;
+		}
 
-        color: white;
-        font-size: 2em;
-    }
+		.fa-times {
+			text-align: right;
+			margin-top: 15px;
+			margin-right: 15px;
+		}
 
-    .fa-bars {
-        position: fixed;
-        top: 15px;
-        left: 35px;
-    }
+		.second-nav .fa-times {
+			display: block;
+		}
 
-    .fa-times {
-        text-align: right;
-        margin-top: 15px;
-        margin-right: 15px;
-    }
+		.second-nav a {
+			display: block;
+		}
 
-    .second-nav .fa-times {
-        display: block;
-    }
+		.container {
+			transition: all 0.5s ease;
+		}
 
-    .second-nav a {
-        display: block;
-    }
+		section {
+			margin: 50px 0px;
+			padding: 0 10px;
+		}
 
-    .container {
-        transition: all .5s ease;
-    }
+		.round {
+			width: 50px;
+			position: fixed;
+			top: 5px;
+			left: 24px;
+			height: 50px;
+			background-color: crimson;
+			border-radius: 50%;
+		}
+	</style>
 
-    section {
+	<body>
+		<header id="head">
+			<nav class="first-nav">
+				<ul>
+					<div class="round">
+						<i class="fas fa-bars"></i>
+					</div>
+					<li><a href="">home</a></li>
+					<li><a href="">about us</a></li>
+					<li><a href="">contact</a></li>
+				</ul>
+			</nav>
+			<nav class="second-nav">
+				<ul>
+					<i class="fas fa-times"></i>
+					<li><a href="#one">category 1</a></li>
+					<li><a href="#two">category 2</a></li>
+					<li><a href="#head">category 3</a></li>
+					<li><a href="#one">category 1</a></li>
+					<li><a href="#two">category 2</a></li>
+					<li><a href="#head">category 3</a></li>
+					<li><a href="#one">category 1</a></li>
+					<li><a href="#two">category 2</a></li>
+					<li><a href="#head">category 3</a></li>
+					<li><a href="#one">category 1</a></li>
+					<li><a href="#two">category 2</a></li>
+					<li><a href="#head">category 3</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+			<section class="">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore at,
+				magnam impedit, reiciendis illum tempore voluptatem laborum nulla
+				cupiditate aliquam id iusto eaque, odio ab tempora eum tenetur sed
+				blanditiis? Nihil unde tempora veritatis hic obcaecati libero nisi nam
+				ipsum atque maxime nesciunt cumque, a eius et, ea at animi. Natus non,
+				excepturi rerum voluptates adipisci eligendi iure eum aut? Vero,
+				tempore. Aspernatur veritatis perspiciatis laboriosam, fugit provident
+				corporis sint rerum non sunt voluptatem esse culpa facilis amet delectus
+				eaque assumenda, illum soluta dolor! Ducimus libero inventore adipisci
+				rem. Id! Ratione sunt soluta quo culpa autem expedita libero ut fugit
+				saepe temporibus ducimus pariatur, quae laudantium dolorum deserunt in
+				assumenda iste facilis. Autem voluptatum iusto quis itaque, reiciendis
+				ut voluptatem! Nihil iste rem porro aliquid harum est repellendus, nemo
+				voluptatibus voluptatum at veritatis ex optio laborum vero adipisci
+				pariatur vitae ducimus fugit quae ea maxime facere autem minus fugiat.
+				Inventore? Asperiores in sequi cum maxime ullam consequuntur saepe autem
+				minus sed cumque modi molestiae odit voluptates blanditiis, veritatis
+				reiciendis quae inventore rerum minima animi. Blanditiis quod ut
+				veritatis optio corporis? Labore libero delectus facilis explicabo
+				laborum pariatur odit aliquam neque quia aperiam molestias minus autem
+				obcaecati earum quis illo, omnis quas repudiandae velit amet esse.
+				Dolorum, vero? Tempora, doloremque magnam! Voluptates repudiandae
+				laboriosam atque eius ea? Aliquid pariatur dignissimos, porro aperiam
+				quae ipsa dolore voluptatem sit voluptates. Earum voluptatum ab
+				recusandae eius? Tempora incidunt quod iure dolor impedit velit odio!
+				Quidem deleniti, corrupti harum assumenda perferendis quas ipsa voluptas
+				aperiam rerum amet. Voluptatibus tenetur porro maiores molestiae
+				perferendis quis doloribus earum quo debitis optio. Enim porro voluptas
+				cupiditate expedita officiis. Recusandae exercitationem nam tempora quae
+				quo ipsum quam tenetur consectetur nobis explicabo. Vel, est dolorem!
+				Error deserunt dolorem, veniam quaerat similique repellendus, totam est
+				perferendis consequatur rerum alias dolorum corrupti? Lorem ipsum dolor,
+				sit amet consectetur adipisicing elit. Architecto eum pariatur
+				perferendis iure quos saepe in quis corrupti, cumque nostrum. Quas, sunt
+				non possimus pariatur doloribus iste culpa adipisci perspiciatis.
+				Reiciendis, consequuntur possimus cum quas suscipit quisquam saepe
+				veniam porro dignissimos totam! Aliquam, saepe minima aperiam
+				consequuntur assumenda eveniet facere cupiditate odit hic impedit
+				possimus ducimus ipsa rem eius laborum. Eius aut expedita tenetur modi
+				blanditiis debitis possimus officiis, sed numquam sapiente minima rem
+				eum. Dolore sunt esse voluptas. Ratione non ipsam quo similique
+				perspiciatis ab inventore illo, id dicta. Fugiat adipisci, ratione
+				deserunt totam nostrum porro at eveniet delectus, deleniti incidunt,
+				nesciunt tempora consequatur nisi? Nisi mollitia odit similique
+				distinctio. In nemo dolore porro cupiditate accusantium adipisci ipsa!
+				Tempore? Similique, reprehenderit ratione? Dolores hic esse iusto error,
+				officia in odio exercitationem mollitia sit sunt? Eveniet esse nihil
+				impedit aspernatur nisi reprehenderit praesentium laborum veniam modi.
+				Quibusdam eaque velit iste! Illum dolore distinctio nulla impedit
+				facere? Iste officia repellat soluta omnis illum eius architecto
+				doloribus voluptatibus officiis mollitia molestiae eligendi fuga
+				dolorem, voluptates illo! Sequi distinctio repellat doloremque beatae
+				sit. Qui officia minima earum, maiores nulla quas itaque repellat. Nam
+				officiis est voluptate soluta. Non ex quo delectus blanditiis atque nisi
+				animi enim mollitia, dolorem ab suscipit eius nam a! Id, eveniet
+				repellendus nostrum voluptate molestiae perspiciatis iusto deserunt
+				culpa distinctio porro vero mollitia velit sed aliquam cupiditate error
+				repudiandae, temporibus nam pariatur aspernatur blanditiis saepe
+				deleniti quam sit! Laboriosam. Nam beatae explicabo alias, itaque neque
+				nemo provident commodi temporibus perferendis molestias rerum!
+				Consectetur, consequatur, reiciendis eligendi perspiciatis esse maxime
+				iure quam pariatur veritatis amet cumque in dolores dignissimos.
+				Aliquam. Molestias eius modi ratione autem dicta. Reprehenderit beatae
+				veniam laborum rerum sit recusandae natus placeat praesentium tempore
+				eaque voluptate corrupti ex culpa, aliquam quia sint molestias velit
+				esse? Eligendi, consequatur. Expedita necessitatibus, repellendus
+				consequuntur beatae quas unde deserunt voluptate voluptatibus aspernatur
+				hic esse omnis sint similique voluptates, accusantium rem repellat,
+				incidunt numquam perferendis voluptatem assumenda aut rerum! Quisquam,
+				obcaecati asperiores. Saepe inventore ab iusto quidem error quod
+				praesentium tempora temporibus, doloribus harum labore sed mollitia ipsa
+				pariatur nesciunt repellendus magnam consequatur facere placeat.
+				Voluptates quas, ullam mollitia fuga velit explicabo? Exercitationem
+				maiores autem id, obcaecati officia suscipit eos accusamus. Tenetur
+				officiis saepe eligendi harum! Illum asperiores voluptatum quam aperiam
+				dolore? Quaerat doloremque, minus rerum provident et aliquam corrupti
+				facilis porro! Assumenda, voluptates. Quo earum facere doloribus, natus
+				ipsum eius obcaecati, delectus adipisci et ullam beatae veritatis dolor
+				magnam! Soluta voluptatibus, dolor ipsum impedit dolorem ut. Nulla dicta
+				quod explicabo cupiditate. Officia quaerat consequatur laboriosam natus
+				animi non quas enim quae! Perspiciatis cumque odit dolores
+				exercitationem adipisci modi repellendus. Sint exercitationem odit illo,
+				hic aut eligendi nisi porro minus dolorem optio!
+			</section>
+			<section id="two">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, iste
+				suscipit aperiam sint dolore culpa, earum voluptas vitae soluta alias,
+				quae maiores doloremque? Aliquam quos corrupti earum, consequatur ullam
+				fuga? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+				sapiente necessitatibus in, est aliquam quibusdam aperiam error?
+				Eligendi repellat repudiandae dicta, quam ipsum exercitationem hic
+				beatae est reprehenderit doloribus quasi! Inventore unde at deleniti
+				nihil iure veniam soluta expedita rerum et, quasi labore voluptatibus
+				ipsa nesciunt, illo harum perspiciatis, porro earum facilis. Qui
+				voluptates vel aliquid? Praesentium assumenda minima itaque. Fugit
+				magnam veritatis explicabo facere cumque earum officia? Repellat vel sit
+				ea provident. Illum itaque optio omnis, nulla veritatis explicabo
+				accusamus totam quisquam aperiam eius tempora rem? Repellendus, hic
+				quidem? Qui non excepturi molestias provident ut quidem perspiciatis
+				omnis sunt eos, in, deserunt ea numquam officiis. Incidunt optio
+				doloremque rem deserunt delectus tempore in. Ut mollitia quod unde rerum
+				harum? Soluta molestiae architecto aspernatur hic voluptas ea, amet
+				ducimus officiis ullam necessitatibus eum quidem velit! Tempore nihil
+				delectus minus inventore cum soluta explicabo natus voluptatum, minima
+				dignissimos aliquid maiores recusandae?
+			</section>
+		</div>
+	</body>
+	<script>
+		const bar = document.querySelector('.fa-bars');
+		const nav = document.querySelector('.second-nav');
+		const times = document.querySelector('.fa-times');
+		const container = document.querySelector('.container');
 
-        margin: 50px 0px;
-        padding: 0 10px;
-    }
+		function addclass() {
+			nav.classList.add('open');
+			container.classList.add('margin');
+		}
+		bar.addEventListener('click', addclass);
 
-    .round {
-        width: 50px;
-        position: fixed;
-        top: 5px;
-        left: 24px;
-        height: 50px;
-        background-color: crimson;
-        border-radius: 50%;
-    }
-</style>
-
-<body>
-    <header id="head">
-        <nav class="first-nav">
-            <ul>
-                <div class="round">
-                    <i class="fas fa-bars"></i></div>
-                <li><a href="">home</a></li>
-                <li><a href="">about us</a></li>
-                <li><a href="">contact</a></li>
-            </ul>
-        </nav>
-        <nav class="second-nav">
-            <ul>
-                <i class="fas fa-times"></i>
-                <li><a href="#one">category 1</a></li>
-                <li><a href="#two">category 2</a></li>
-                <li><a href="#head">category 3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore at, magnam impedit, reiciendis illum
-            tempore
-            voluptatem laborum nulla cupiditate aliquam id iusto eaque, odio ab tempora eum tenetur sed blanditiis?
-            Nihil unde tempora veritatis hic obcaecati libero nisi nam ipsum atque maxime nesciunt cumque, a eius et, ea
-            at
-            animi. Natus non, excepturi rerum voluptates adipisci eligendi iure eum aut?
-            Vero, tempore. Aspernatur veritatis perspiciatis laboriosam, fugit provident corporis sint rerum non sunt
-            voluptatem esse culpa facilis amet delectus eaque assumenda, illum soluta dolor! Ducimus libero inventore
-            adipisci rem. Id!
-            Ratione sunt soluta quo culpa autem expedita libero ut fugit saepe temporibus ducimus pariatur, quae
-            laudantium
-            dolorum deserunt in assumenda iste facilis. Autem voluptatum iusto quis itaque, reiciendis ut voluptatem!
-            Nihil iste rem porro aliquid harum est repellendus, nemo voluptatibus voluptatum at veritatis ex optio
-            laborum
-            vero adipisci pariatur vitae ducimus fugit quae ea maxime facere autem minus fugiat. Inventore?
-            Asperiores in sequi cum maxime ullam consequuntur saepe autem minus sed cumque modi molestiae odit
-            voluptates
-            blanditiis, veritatis reiciendis quae inventore rerum minima animi. Blanditiis quod ut veritatis optio
-            corporis?
-            Labore libero delectus facilis explicabo laborum pariatur odit aliquam neque quia aperiam molestias minus
-            autem
-            obcaecati earum quis illo, omnis quas repudiandae velit amet esse. Dolorum, vero? Tempora, doloremque
-            magnam!
-            Voluptates repudiandae laboriosam atque eius ea? Aliquid pariatur dignissimos, porro aperiam quae ipsa
-            dolore
-            voluptatem sit voluptates. Earum voluptatum ab recusandae eius? Tempora incidunt quod iure dolor impedit
-            velit
-            odio!
-            Quidem deleniti, corrupti harum assumenda perferendis quas ipsa voluptas aperiam rerum amet. Voluptatibus
-            tenetur porro maiores molestiae perferendis quis doloribus earum quo debitis optio. Enim porro voluptas
-            cupiditate expedita officiis.
-            Recusandae exercitationem nam tempora quae quo ipsum quam tenetur consectetur nobis explicabo. Vel, est
-            dolorem!
-            Error deserunt dolorem, veniam quaerat similique repellendus, totam est perferendis consequatur rerum alias
-            dolorum corrupti?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto eum pariatur perferendis iure quos
-            saepe in
-            quis corrupti, cumque nostrum. Quas, sunt non possimus pariatur doloribus iste culpa adipisci perspiciatis.
-            Reiciendis, consequuntur possimus cum quas suscipit quisquam saepe veniam porro dignissimos totam! Aliquam,
-            saepe minima aperiam consequuntur assumenda eveniet facere cupiditate odit hic impedit possimus ducimus ipsa
-            rem
-            eius laborum.
-            Eius aut expedita tenetur modi blanditiis debitis possimus officiis, sed numquam sapiente minima rem eum.
-            Dolore
-            sunt esse voluptas. Ratione non ipsam quo similique perspiciatis ab inventore illo, id dicta.
-            Fugiat adipisci, ratione deserunt totam nostrum porro at eveniet delectus, deleniti incidunt, nesciunt
-            tempora
-            consequatur nisi? Nisi mollitia odit similique distinctio. In nemo dolore porro cupiditate accusantium
-            adipisci
-            ipsa! Tempore?
-            Similique, reprehenderit ratione? Dolores hic esse iusto error, officia in odio exercitationem mollitia sit
-            sunt? Eveniet esse nihil impedit aspernatur nisi reprehenderit praesentium laborum veniam modi. Quibusdam
-            eaque
-            velit iste!
-            Illum dolore distinctio nulla impedit facere? Iste officia repellat soluta omnis illum eius architecto
-            doloribus
-            voluptatibus officiis mollitia molestiae eligendi fuga dolorem, voluptates illo! Sequi distinctio repellat
-            doloremque beatae sit.
-            Qui officia minima earum, maiores nulla quas itaque repellat. Nam officiis est voluptate soluta. Non ex quo
-            delectus blanditiis atque nisi animi enim mollitia, dolorem ab suscipit eius nam a!
-            Id, eveniet repellendus nostrum voluptate molestiae perspiciatis iusto deserunt culpa distinctio porro vero
-            mollitia velit sed aliquam cupiditate error repudiandae, temporibus nam pariatur aspernatur blanditiis saepe
-            deleniti quam sit! Laboriosam.
-            Nam beatae explicabo alias, itaque neque nemo provident commodi temporibus perferendis molestias rerum!
-            Consectetur, consequatur, reiciendis eligendi perspiciatis esse maxime iure quam pariatur veritatis amet
-            cumque
-            in dolores dignissimos. Aliquam.
-            Molestias eius modi ratione autem dicta. Reprehenderit beatae veniam laborum rerum sit recusandae natus
-            placeat
-            praesentium tempore eaque voluptate corrupti ex culpa, aliquam quia sint molestias velit esse? Eligendi,
-            consequatur.
-            Expedita necessitatibus, repellendus consequuntur beatae quas unde deserunt voluptate voluptatibus
-            aspernatur
-            hic esse omnis sint similique voluptates, accusantium rem repellat, incidunt numquam perferendis voluptatem
-            assumenda aut rerum! Quisquam, obcaecati asperiores.
-            Saepe inventore ab iusto quidem error quod praesentium tempora temporibus, doloribus harum labore sed
-            mollitia
-            ipsa pariatur nesciunt repellendus magnam consequatur facere placeat. Voluptates quas, ullam mollitia fuga
-            velit
-            explicabo?
-            Exercitationem maiores autem id, obcaecati officia suscipit eos accusamus. Tenetur officiis saepe eligendi
-            harum! Illum asperiores voluptatum quam aperiam dolore? Quaerat doloremque, minus rerum provident et aliquam
-            corrupti facilis porro!
-            Assumenda, voluptates. Quo earum facere doloribus, natus ipsum eius obcaecati, delectus adipisci et ullam
-            beatae
-            veritatis dolor magnam! Soluta voluptatibus, dolor ipsum impedit dolorem ut. Nulla dicta quod explicabo
-            cupiditate.
-            Officia quaerat consequatur laboriosam natus animi non quas enim quae! Perspiciatis cumque odit dolores
-            exercitationem adipisci modi repellendus. Sint exercitationem odit illo, hic aut eligendi nisi porro minus
-            dolorem optio!
-        </section>
-        <section id="two">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, iste suscipit aperiam sint dolore culpa,
-            earum
-            voluptas vitae soluta alias, quae maiores doloremque? Aliquam quos corrupti earum, consequatur ullam fuga?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sapiente necessitatibus in, est aliquam
-            quibusdam aperiam error? Eligendi repellat repudiandae dicta, quam ipsum exercitationem hic beatae est
-            reprehenderit doloribus quasi!
-            Inventore unde at deleniti nihil iure veniam soluta expedita rerum et, quasi labore voluptatibus ipsa
-            nesciunt,
-            illo harum perspiciatis, porro earum facilis. Qui voluptates vel aliquid? Praesentium assumenda minima
-            itaque.
-            Fugit magnam veritatis explicabo facere cumque earum officia? Repellat vel sit ea provident. Illum itaque
-            optio
-            omnis, nulla veritatis explicabo accusamus totam quisquam aperiam eius tempora rem? Repellendus, hic quidem?
-            Qui non excepturi molestias provident ut quidem perspiciatis omnis sunt eos, in, deserunt ea numquam
-            officiis.
-            Incidunt optio doloremque rem deserunt delectus tempore in. Ut mollitia quod unde rerum harum?
-            Soluta molestiae architecto aspernatur hic voluptas ea, amet ducimus officiis ullam necessitatibus eum
-            quidem
-            velit! Tempore nihil delectus minus inventore cum soluta explicabo natus voluptatum, minima dignissimos
-            aliquid
-            maiores recusandae?
-        </section>
-    </div>
-</body>
-<script>
-    const bar = document.querySelector('.fa-bars');
-    const nav = document.querySelector('.second-nav');
-    const times = document.querySelector('.fa-times');
-    const container = document.querySelector('.container');
-
-    function addclass() {
-        nav.classList.add('open');
-        container.classList.add('margin');
-    }
-    bar.addEventListener('click', addclass);
-
-    function removeclass() {
-        nav.classList.remove('open');
-        container.classList.remove('margin');
-    }
-    times.addEventListener('click', removeclass);
-    nav.addEventListener('click', removeclass);
-</script>
-
+		function removeclass() {
+			nav.classList.remove('open');
+			container.classList.remove('margin');
+		}
+		times.addEventListener('click', removeclass);
+		nav.addEventListener('click', removeclass);
+	</script>
 </html>
