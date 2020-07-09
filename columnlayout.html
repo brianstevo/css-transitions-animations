@@ -1,183 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
 
-			.container {
-				max-width: 1140px;
-				margin: 0 auto;
-				padding: 10px;
-			}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-			.glutter-grid {
-				display: grid;
-				grid-template-columns: repeat(12, 1fr);
-				grid-gap: 20px;
-			}
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 10px;
+        }
 
-			.plain-grid {
-				display: grid;
-				margin: 20px 0;
-				grid-template-columns: repeat(12, 1fr);
-			}
+        .glutter-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px;
+        }
 
-			.cell {
-				min-height: 200px;
-				background-color: #ddd;
-			}
+        .plain-grid {
+            display: grid;
+            margin: 20px 0;
+            grid-template-columns: repeat(12, 1fr);
+        }
 
-			.transparent-cell {
-				min-height: 200px;
-			}
+        .cell {
+            min-height: 200px;
+            background-color: #ddd;
+        }
 
-			/*smal devices*/
-			[class*='col'] {
-				grid-column-end: span 12;
-			}
+        .transparent-cell {
+            min-height: 200px;
+        }
 
-			/*tablet*/
-			@media only screen and (max-width: 600px) {
-				.empty-grid {
-					display: none;
-				}
-				.sm1 {
-					grid-column-end: span 12;
-				}
+        /*smal devices*/
+        [class*='col'] {
+            grid-column-end: span 12;
+        }
 
-				.sm2 {
-					grid-column-end: span 6;
-				}
+        /*tablet*/
+        @media only screen and (max-width: 600px) {
+            .empty-grid {
+                display: none;
+            }
 
-				.sm3 {
-					grid-column-end: span 4;
-				}
+            .sm1 {
+                grid-column-end: span 12;
+            }
 
-				.sm4 {
-					grid-column-end: span 3;
-				}
+            .sm2 {
+                grid-column-end: span 6;
+            }
 
-				.sm6 {
-					grid-column-end: span 2;
-				}
+            .sm3 {
+                grid-column-end: span 4;
+            }
 
-				.sm12 {
-					grid-column-end: span 1;
-				}
-			}
+            .sm4 {
+                grid-column-end: span 3;
+            }
 
-			@media only screen and (min-width: 601px) {
-				.md1 {
-					grid-column-end: span 12;
-				}
+            .sm6 {
+                grid-column-end: span 2;
+            }
 
-				.md2 {
-					grid-column-end: span 6;
-				}
+            .sm12 {
+                grid-column-end: span 1;
+            }
+        }
 
-				.md3 {
-					grid-column-end: span 4;
-				}
+        @media only screen and (min-width: 601px) {
+            .md1 {
+                grid-column-end: span 12;
+            }
 
-				.md4 {
-					grid-column-end: span 3;
-				}
+            .md2 {
+                grid-column-end: span 6;
+            }
 
-				.md6 {
-					grid-column-end: span 2;
-				}
+            .md2-of-3 {
+                grid-column-end: span 8;
+            }
 
-				.md12 {
-					grid-column-end: span 1;
-				}
-			}
+            .md3 {
+                grid-column-end: span 4;
+            }
 
-			@media only screen and (min-width: 1000px) {
-				.col1 {
-					grid-column-end: span 12;
-				}
+            .md2-of-4 {
+                grid-column-end: span 6;
+            }
 
-				.col2 {
-					grid-column-end: span 6;
-				}
+            .md3-of-4 {
+                grid-column-end: span 9;
+            }
 
-				.col3 {
-					grid-column-end: span 4;
-				}
+            .md4 {
+                grid-column-end: span 3;
+            }
 
-				.col4 {
-					grid-column-end: span 3;
-				}
+            .md6 {
+                grid-column-end: span 2;
+            }
 
-				.col6 {
-					grid-column-end: span 2;
-				}
+            .md12 {
+                grid-column-end: span 1;
+            }
+        }
 
-				.col12 {
-					grid-column-end: span 1;
-				}
-			}
-		</style>
-	</head>
+        @media only screen and (min-width: 1000px) {
+            .col1 {
+                grid-column-end: span 12;
+            }
 
-	<body>
-		<div class="container">
-			<div class="glutter-grid">
-				<div class="cell col1 md1">1</div>
-				<div class="empty-grid col2 md2 sm">
-					<!-- <div class="plain-grid">
+            .col2 {
+                grid-column-end: span 6;
+            }
+
+            .col2-of-3 {
+                grid-column-end: span 8;
+            }
+
+            .col3 {
+                grid-column-end: span 4;
+            }
+
+            .col2-of-4 {
+                grid-column-end: span 6;
+            }
+
+            .col3-of-4 {
+                grid-column-end: span 9;
+            }
+
+            .col4 {
+                grid-column-end: span 3;
+            }
+
+            .col6 {
+                grid-column-end: span 2;
+            }
+
+            .col12 {
+                grid-column-end: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="glutter-grid">
+            <div class="cell col1 md1">1</div>
+            <div class="empty-grid col2 md2 sm">
+                <!-- <div class="plain-grid">
 						<div class="transparent-cell col2 sm2 md2">in</div>
 						<div class="transparent-cell col2 sm2 md2">in</div>
 					</div> -->
-				</div>
-				<div class="cell col2 md2 sm">2</div>
-				<div class="cell col3 md3">3</div>
-				<div class="empty-grid col3 md3"></div>
-				<div class="cell col3 md3">3</div>
-				<div class="cell col4 md2">4</div>
-				<div class="cell col4 md2">4</div>
-				<div class="cell col4 md2">4</div>
-				<div class="cell col4 md2">4</div>
-				<div class="cell col6 md3">6</div>
-				<div class="cell col6 md3">6</div>
-				<div class="empty-grid col6 md3"></div>
-				<div class="empty-grid col6 md3"></div>
-				<div class="cell col6 md3">6</div>
-				<div class="cell col6 md3">6</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-				<div class="cell col12">12</div>
-			</div>
-			<div class="plain-grid">
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-				<div class="cell sm12 md12">12</div>
-			</div>
-		</div>
-	</body>
+            </div>
+            <div class="cell col2 md2 sm">2</div>
+            <div class="cell col2 md2 sm">2</div>
+            <div class="cell col2 md2 sm">2</div>
+            <div class="cell col3 md3">3</div>
+            <div class="cell col3 md3">3</div>
+            <div class="cell col3 md3">3</div>
+            <div class="cell col3 md3">3</div>
+            <div class="empty-grid col3 md3">empty</div>
+            <div class="cell col3 md3">3</div>
+            <div class="cell col2-of-3 md2-of-3">2-of-3</div>
+            <!-- <div class="empty-grid col3 md3"></div> -->
+            <div class="cell col3 md3">3</div>
+            <div class="cell col3-of-4 md3-of-4">3-of-4</div>
+            <div class="cell col4 md4">4</div>
+            <!-- <div class="cell col4 md2">4</div> -->
+            <div class="cell col2-of-4 md2-of-4">2-of-4</div>
+            <div class="cell col4 md4">4</div>
+            <div class="cell col4 md4">4</div>
+            <div class="cell col4 md4">4</div>
+            <div class="cell col4 md4">4</div>
+            <div class="cell col4 md4">4</div>
+            <div class="cell col4 md4">4</div>
+            <div class="cell col4 md2">responsive 4</div>
+            <div class="cell col4 md2">responsive 4</div>
+            <div class="cell col4 md2">responsive 4</div>
+            <div class="cell col4 md2">responsive 4</div>
+            <div class="cell col6 md3">6</div>
+            <div class="cell col6 md3">6</div>
+            <div class="empty-grid col6 md3"></div>
+            <div class="empty-grid col6 md3"></div>
+            <div class="cell col6 md3">6</div>
+            <div class="cell col6 md3">6</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+            <div class="cell col12">12</div>
+        </div>
+        <div class="plain-grid">
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+            <div class="cell sm12 md12">12</div>
+        </div>
+    </div>
+</body>
+
 </html>
